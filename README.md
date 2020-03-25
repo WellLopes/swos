@@ -1,1 +1,6 @@
-Respositório - Site Semana Omnistack - HTML/CSS/JS/NODE.JS
+# Respository - Web Site Omnistack Week - 
+
+* Tech used in this project at now: 
+ * HTML
+ * CSS
+ * JS
