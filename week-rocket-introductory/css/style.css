@@ -6,6 +6,12 @@ body {
 
 }
 
+/* GLOBAL */
+
+body.hideScroll {
+   overflow: hidden;
+}
+
 a {
    color: #ff5e84;
    font-weight: bold;
@@ -21,6 +27,38 @@ p, .description {
    line-height: 24px;
    letter-spacing: 0.1px;
 }
+
+.button {
+   
+   background: #ff5e84;
+   color: white;
+
+   width: 150px;
+   height: 40px;
+   
+   border-radius: 8px; /*Arredondamento de bordas*/
+
+   box-shadow: 0px 8px 16px #ff5e8436; /*eixo x before y*/
+
+   font-size: 14px;
+   font-weight: bold;   
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+
+}
+
+.button:hover {
+   text-decoration: none;
+   background-color: #0984e3;
+   transition: 400ms;
+
+}
+
+/* PADRÃO */
+
 #conteiner {
    width: 80%;
    max-width: 980px;
@@ -33,7 +71,7 @@ p, .description {
 #intro {
    width: 300px;
    
-   margin-right: 20px;
+   margin-right: 64px;
 }
 
 main {
@@ -43,42 +81,27 @@ main {
 #buttons {
    display: flex;
    margin-bottom: 32px;
-   justify-content: space-evenly;  /*Only when: gred, diplay...*/
-   text-align: center;
-   
+   justify-content: space-evenly;  /*Only when: gred, diplay...*/   
 }
 
 button {
-   color: #ff5e84;
-   border: none;
-   font-weight: bold;
    background: none;
-   cursor: pointer;
-   outline: none;
+   color: #ff5e84;
+   
+   border: none;
+   
    font-size: 14px;
    font-weight: bold;
    line-height: 18px;
    letter-spacing: 0.2px;
+   
+   cursor: pointer;
+   outline: none;
+
 }
 
 button:hover {
    text-decoration: underline;
-}
-
-button.fat {
-   background: #ff5e84;
-   color: white;
-
-   width: 150px;
-   height: 40px;
-   
-   border-radius: 6px; /*Arredondamento de bordas*/
-
-   box-shadow: 0px 8px 16px #ff5e8436; /*eixo x before y*/
-}
-
-button.fat:hover {
-   text-decoration: none;
 }
 
 footer {
@@ -139,18 +162,23 @@ footer a:hover {
    background: #ff5e84;
 
    position: absolute;
+   
    top: 0;
-
-   width: 100vw;
-   height: 100vh;
+   bottom: 0;
+   right: 0;
+   left: 0;
 
    display: flex;
    justify-content: center;
    transition: 400ms;
 }
 
+#modal.addScroll {
+   overflow: auto;
+}
+
 #modal .content {
-   margin-top: 128px;
+   margin-top: 5%;
    color: white;
 
 }
@@ -167,7 +195,7 @@ footer a:hover {
    width: 80%;
    max-width: 800px;
    
-   margin: 0 auto;
+   margin: 0 auto 10%;
 
    display: grid;
    grid-template-columns: 1fr 1fr;
@@ -261,4 +289,67 @@ form button:hover {
 #modal.hide {
    opacity: 0;
    visibility: hidden;
+}
+
+/* ideias.html */
+#page-ideas #conteiner {
+   display: block;
+}
+
+#page-ideas header {
+   display: flex;
+
+   justify-content: space-between;
+}
+
+#page-ideas nav {
+   display: flex;
+   align-items: center;
+}
+
+#page-ideas nav li {
+   list-style-type: none;
+
+   margin-right: 16px;
+}
+
+#page-ideas nav li a {
+   color: #25282B;
+   text-decoration: none;
+}
+
+#page-ideas nav li a.button {
+   color: white;
+}
+
+
+#page-ideas nav li:last-child {
+   margin: 0;
+}
+
+#page-ideas section#title {
+   text-align: center;
+
+   margin: 64px 0;
+}
+
+#page-ideas section#title p {
+   opacity: 0.7;
+   margin: 0;
+}
+
+#page-ideas section#title h1 {
+   margin: 0;
+   font-size: 28px;
+}
+
+#page-ideas section#ideas {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+}
+
+#page-ideas section .idea {
+   margin: 0;
+
 }
